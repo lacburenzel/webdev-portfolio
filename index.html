@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renzel Lacbu | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-5 6-8 10-10"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.1A9.8 9.8 0 0 1 12 6c5 0 8.5 4 9.5 6a14 14 0 0 1-2.6 3.4M6.5 7.6A14 14 0 0 0 2.5 12c1 2 4.5 6 9.5 6 1.4 0 2.7-.3 3.8-.8"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12C3.5 10 7 6 12 6s8.5 4 9.5 6c-1 2-4.5 6-9.5 6s-8.5-4-9.5-6z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <a class="brand" href="#home"><svg class="ic"><use href="#i-leaf"/></svg>Renzel Lacbu</a>
+  <nav>
+    <a href="#home">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#reflection">Reflection</a>
+    <a href="#works">Works</a>
+    <a href="#thanks">Thanks</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO / PROFILE -->
+  <section class="hero" id="home">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Renzel <span>Lacbu</span></h1>
+    <p class="role">Future Frontend Developer</p>
+    <p class="motto">“Time is Gold.”</p>
+
+    <button class="btn" id="toggle" aria-expanded="true" aria-controls="profile">
+      <svg class="ic"><use href="#i-eye-off"/></svg><span>Hide Profile</span>
+    </button>
+
+    <div class="profile" id="profile">
+      <div class="photo-col">
+        <div class="photo" id="photo"><svg class="ic lg"><use href="#i-user"/></svg></div>
+        <label class="upload">
+          <svg class="ic"><use href="#i-camera"/></svg>Add picture
+          <input type="file" id="file" accept="image/*">
+        </label>
+      </div>
+
+      <dl class="info">
+        <dt>Name</dt><dd>Lacbu, Renzel M.</dd>
+        <dt>Birthday</dt><dd>May 20, 2006</dd>
+        <dt>Age</dt><dd>20</dd>
+        <dt>Course &amp; Year</dt><dd>BSCS31A</dd>
+        <dt>Goal</dt><dd>Future Frontend Developer</dd>
+        <dt>Motto</dt><dd>Time is Gold</dd>
+        <dt>Hobbies</dt><dd class="tags"><span>Cooking</span><span>Baking</span></dd>
+        <dt>Sports</dt><dd class="tags"><span>Volleyball</span></dd>
+        <dt>Favorite food</dt><dd class="tags"><span>Buttered Shrimp</span></dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p class="sub">Adjust the sliders to change each skill level.</p>
+    <div class="panel">
+      <div class="skill">
+        <div class="row"><span>JavaScript</span><output id="v-js">70%</output></div>
+        <div class="bar"><i id="b-js" style="width:70%"></i></div>
+        <input type="range" min="0" max="100" value="70" data-k="js" aria-label="JavaScript level">
+      </div>
+      <div class="skill">
+        <div class="row"><span>CSS</span><output id="v-css">80%</output></div>
+        <div class="bar"><i id="b-css" style="width:80%"></i></div>
+        <input type="range" min="0" max="100" value="80" data-k="css" aria-label="CSS level">
+      </div>
+      <div class="skill">
+        <div class="row"><span>HTML</span><output id="v-html">90%</output></div>
+        <div class="bar"><i id="b-html" style="width:90%"></i></div>
+        <input type="range" min="0" max="100" value="90" data-k="html" aria-label="HTML level">
+      </div>
+    </div>
+  </section>
+
+  <!-- REFLECTION -->
+  <section id="reflection">
+    <h2>Reflection</h2>
+    <div class="grid three">
+      <article class="card">
+        <svg class="ic lg"><use href="#i-code"/></svg>
+        <h3>HTML</h3>
+        <p>HTML taught me that every website starts with structure. Using the right tags keeps a page organized, readable, and accessible.</p>
+      </article>
+      <article class="card">
+        <svg class="ic lg"><use href="#i-code"/></svg>
+        <h3>CSS</h3>
+        <p>CSS turned plain pages into designs I’m proud of. Spacing, color, flexbox, and grid showed me that small details matter.</p>
+      </article>
+      <article class="card">
+        <svg class="ic lg"><use href="#i-code"/></svg>
+        <h3>JavaScript</h3>
+        <p>JavaScript brought my pages to life through buttons, sliders, and interaction. It was the hardest, and the most rewarding.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works">
+    <h2>Works</h2>
+    <div class="group" id="midterm">
+      <h3 class="group-title"><span>Midterm</span><small>Activities 3, 4, 5</small></h3>
+      <div class="grid">
+        <article class="card work"><span class="num">ACT 3</span><h3>Activity 3 Semantic</h3><p>Reflection: I learned how to use semantic HTML elements to organize webpage content properly. This activity helped me understand how semantic tags improve the structure and readability of a website.</p><a class="link" href="https://act3-wheat.vercel.app/" target="_blank" rel="noopener">Open website <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+        <article class="card work"><span class="num">ACT 4</span><h3>Activity 4 Semantic</h3><p>Reflection: I learned more about using semantic elements to create a well-organized webpage. This activity improved my understanding of how proper HTML structure makes websites easier to understand and maintain.</p><a class="link" href="https://act-4-eight.vercel.app/" target="_blank" rel="noopener">Open website <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+        <article class="card work"><span class="num">ACT 5</span><h3>Activity 5 Landing Page</h3><p>Reflection: I learned how to create a landing page with an organized layout and attractive design. This activity helped me improve my skills in designing user-friendly and visually appealing websites.</p><a class="link" href="https://act5-pi.vercel.app/" target="_blank" rel="noopener">Open website <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+      </div>
+    </div>
+    <div class="group" id="finals">
+      <h3 class="group-title"><span>Finals</span><small>Activities 1, 2, 3</small></h3>
+      <div class="grid">
+        <article class="card work"><span class="num">ACT 1</span><h3>Activity 1 HTML DOM</h3><p>Reflection: I learned how the Document Object Model (DOM) allows JavaScript to access and modify HTML elements. This activity helped me understand how to make webpages more interactive.</p><a class="link" href="https://f-act1.vercel.app/" target="_blank" rel="noopener">Open website <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+        <article class="card work"><span class="num">ACT 2</span><h3>Activity 2 Asynchronous</h3><p>Reflection: I learned how asynchronous JavaScript allows tasks to run without blocking other operations. This activity helped me understand the use of promises and how to handle operations that take time to complete.</p><a class="link" href="https://f-act2.vercel.app/" target="_blank" rel="noopener">Open website <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+        <article class="card work"><span class="num">ACT 3</span><h3>Activity 3 AJAX</h3><p>Reflection: I learned how AJAX allows a webpage to retrieve data from a server without reloading the entire page. This activity helped me understand how to make websites more dynamic and responsive.</p><a class="link" href="https://f-act3.vercel.app/" target="_blank" rel="noopener">Open website <svg class="ic"><use href="#i-arrow"/></svg></a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- THANK YOU -->
+  <section id="thanks">
+    <div class="thanks">
+      <h2>Thank you, Sir</h2>
+      <p>To our Web Development instructor: thank you for your patience and guidance, even though we’re so <em>pasaway</em>.</p>
+      <p>You taught us more than code. You taught us to keep trying, to fix our bugs, and to be proud of what we build.</p>
+      <p class="sign">Renzel Lacbu · BSCS31A</p>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Renzel Lacbu</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
