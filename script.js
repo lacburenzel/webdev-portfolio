@@ -18,30 +18,13 @@ document.querySelectorAll('input[type="range"]').forEach((slider) => {
   });
 });
 
-// Profile picture upload
-const photo = document.getElementById('photo');
-const fileInput = document.getElementById('file');
+// Message for Sir (click to show / hide)
+const msgBtn = document.getElementById('msgBtn');
+const msgBody = document.getElementById('msgBody');
 
-function showPhoto(src) {
-  photo.innerHTML = '';
-  const img = new Image();
-  img.src = src;
-  img.alt = 'Renzel Lacbu';
-  photo.appendChild(img);
-}
-
-try {
-  const saved = localStorage.getItem('portfolio-photo');
-  if (saved) showPhoto(saved);
-} catch (e) { /* storage unavailable */ }
-
-fileInput.addEventListener('change', (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    showPhoto(reader.result);
-    try { localStorage.setItem('portfolio-photo', reader.result); } catch (e) {}
-  };
-  reader.readAsDataURL(file);
+msgBtn.addEventListener('click', () => {
+  const open = msgBody.hasAttribute('hidden');
+  msgBody.toggleAttribute('hidden', !open);
+  msgBtn.setAttribute('aria-expanded', String(open));
+  msgBtn.querySelector('small').textContent = open ? 'Click to close' : 'Click to read';
 });

@@ -14,7 +14,12 @@
     <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-5 6-8 10-10"/></symbol>
     <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.1A9.8 9.8 0 0 1 12 6c5 0 8.5 4 9.5 6a14 14 0 0 1-2.6 3.4M6.5 7.6A14 14 0 0 0 2.5 12c1 2 4.5 6 9.5 6 1.4 0 2.7-.3 3.8-.8"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
     <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12C3.5 10 7 6 12 6s8.5 4 9.5 6c-1 2-4.5 6-9.5 6s-8.5-4-9.5-6z"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M15 4h-2.5A3.5 3.5 0 0 0 9 7.5V10H6v4h3v7h4v-7h3l1-4h-4V7.5c0-.3.2-.5.5-.5H15z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/></symbol>
     <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
@@ -29,6 +34,7 @@
     <a href="#reflection">Reflection</a>
     <a href="#works">Works</a>
     <a href="#thanks">Thanks</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -133,9 +139,41 @@
   <section id="thanks">
     <div class="thanks">
       <h2>Thank you, Sir</h2>
-      <p>To our Web Development instructor: thank you for your patience and guidance, even though we’re so <em>pasaway</em>.</p>
-      <p>You taught us more than code. You taught us to keep trying, to fix our bugs, and to be proud of what we build.</p>
-      <p class="sign">Renzel Lacbu · BSCS31A</p>
+      <button class="msg-box" id="msgBtn" aria-expanded="false" aria-controls="msgBody">
+        <span class="msg-ic"><svg class="ic lg"><use href="#i-message"/></svg></span>
+        <span class="msg-text"><strong>A message for Sir</strong><small>Click to read</small></span>
+        <svg class="ic chev"><use href="#i-chevron"/></svg>
+      </button>
+      <div class="msg-body" id="msgBody" hidden>
+        <p>To our Web Development instructor: thank you for your patience and guidance, even though we’re so <em>pasaway</em>.</p>
+        <p>You taught us more than code. You taught us to keep trying, to fix our bugs, and to be proud of what we build.</p>
+        <p class="sign">Renzel Lacbu · BSCS31A</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p class="sub">Feel free to reach out through any of these.</p>
+    <div class="contact-grid">
+      <!-- To make Facebook clickable, change this <div> into: <a class="contact" href="YOUR-FACEBOOK-LINK" target="_blank" rel="noopener"> (and the closing </div> into </a>) -->
+      <div class="contact">
+        <span class="c-ic"><svg class="ic lg"><use href="#i-facebook"/></svg></span>
+        <span class="c-text"><small>Facebook</small><b>Renzel</b></span>
+      </div>
+      <a class="contact" href="https://instagram.com/arnz" target="_blank" rel="noopener">
+        <span class="c-ic"><svg class="ic lg"><use href="#i-instagram"/></svg></span>
+        <span class="c-text"><small>Instagram</small><b>arnz</b></span>
+      </a>
+      <a class="contact" href="mailto:renzellacbu@gmail.com">
+        <span class="c-ic"><svg class="ic lg"><use href="#i-mail"/></svg></span>
+        <span class="c-text"><small>Gmail</small><b>renzellacbu@gmail.com</b></span>
+      </a>
+      <a class="contact" href="tel:+639917152250">
+        <span class="c-ic"><svg class="ic lg"><use href="#i-phone"/></svg></span>
+        <span class="c-text"><small>Contact number</small><b>099917152250</b></span>
+      </a>
     </div>
   </section>
 </main>
